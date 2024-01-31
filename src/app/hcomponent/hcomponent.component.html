@@ -1,0 +1,100 @@
+<nav class="navbar navbar-expand-sm navbar-light">
+    <!-- <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <h3>Diprella</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav> -->
+  <div class="container-fluid d-flex align-items-center justify-content-evenly " style="height: 100vh;"> 
+    <div class="row my-3">
+      <div class="col-md-2 col-lg-2"></div>
+      <div class="col-md-8 col-lg-8 h-contain">
+        <div class="row my-3 h-slider">
+          <div class="col-md-7 col-lg-7  "></div>
+          <div class="col-md-5 col-lg-5 h-color {{sliderClass}} "></div>
+        </div>
+        <div class="row my-3 h-login">
+          <div class="row my-3 h-drip">
+            <div class="col-md-12 col-lg-12">
+              <a class="navbar-brand" href="#">
+                <h3 class="h-dripella {{dripellaClass}}">{{projectName}}</h3>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-7 col-lg-7 {{formClass}} h-form-content">
+            
+            <div class="row my-3 ">
+              <div class="col-md-2 col-lg-2"></div>
+              <div class="col-md-7 col-lg-7 h-connect-title ">
+                <h2>{{formTitle}}</h2>
+              </div>
+              <div class="row my-3 h-sign">
+                <div class="col-md-2 col-lg-2"></div>
+                <div class="col-md-8 col-lg-8">
+                  <p class="h-err">{{this.errMessage}}</p>
+                  <div class="h-group form-group">
+                    <label for="exampleInputEmail1" class="h-label">Email</label>
+                    <input #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="hrivonandrasana@gmail.com">
+                  </div>
+                  <div class="h-group form-group">
+                    <label for="exampleInputEmail1" class="h-label">Mot de passe</label>
+                    <input #pwd type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="mot de passe">
+                  </div>
+                </div>
+                <div class="col-md-2 col-lg-2"></div>
+                <div class="col-md-2 col-lg-2"></div>
+                <div class="col-md-12 col-lg-12"></div>
+                <div class="col-md-2 col-lg-2"></div>
+                <div class="col-md-8 col-lg-8 h-confirm">
+                  <button type="submit" class="btn btn-primary btn-block" (click)="login(email,pwd)">{{connectMessage}}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 h-greeting-content {{greetingContent}}">
+            <div class="col-md-12 col-lg-12 h-connect-title ">
+              <h2>{{wellComeMessage}}</h2>
+            </div>
+            <div class="col-md-12 col-lg-12 h-connect-as ">
+              <p>{{information}}</p>
+            </div>
+            <div class="col-md-12 col-lg-12">
+              <button  class="btn " (click)="clickSignUp()">{{signUpMessage}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

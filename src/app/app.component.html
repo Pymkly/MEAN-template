@@ -1,10 +1,15 @@
-<div style="text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="content">
+<!-- <div style="text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" class="content">
   <img width="400" alt="Angular Logo" src="assets/images/mean_stack_banner.png">
   <span style="display: block"> {{ note }} </span>
   <br>
   <small>Github repository: <a href="https://github.com/agonxgashi/MEAN-template">agonxgashi/MEAN-template</a>  </small>
   <br>
   <small> ©{{ currentDate }} </small>
+  <small> ©{{ gettService().say() }} </small>
 
-</div>
+  <mean-hello-world [name]="name" (changeName)="changeName()"></mean-hello-world>
+
+</div> -->
+<mean-navbar *ngIf="!isLogin()"></mean-navbar>
 <router-outlet></router-outlet>
+<mean-sidenav *ngIf="!isLogin()"></mean-sidenav>

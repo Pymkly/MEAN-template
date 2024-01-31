@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import "node_modules\\bootstrap\\dist\\css\\bootstrap.css";
+@import "node_modules\\bootstrap-icons\\font\\bootstrap-icons.css";
+@import "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap");
+:root {
+  --primary-100: #2c3e50;
+  --primary-200: #57687c;
+  --primary-300: #b4c7dd;
+  --accent-100: #f7cac9;
+  --accent-200: #926b6a;
+  --text-100: #333333;
+  --text-200: #5c5c5c;
+  --bg-100: #f2f2f2;
+  --bg-200: #e8e8e8;
+  --bg-300: #bfbfbf;
+}
+a {
+  text-decoration: none;
+  color: var(--bg-200);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  background-color: var(--bg-100);
+}

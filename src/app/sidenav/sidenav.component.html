@@ -1,0 +1,58 @@
+<div class="container-fluid py-3 h-footer">
+  <div class="row my-3 h-content">
+    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+      <div class="row gap-2 px-2 position-relative">
+        <div class="{{ menuClass }}" style="z-index: 2">
+          <span class="{{ buttonClass }}">
+            <span>Menu</span>
+            <i
+              [class]="clicked ? 'fa fa-xmark' : 'fa fa-bars'"
+              (click)="click()"
+            ></i>
+          </span>
+        </div>
+        <div [class]="rightClass" (mouseleave)="leave()">
+          <div class="d-flex justify-content-evenly col-12" *ngIf="!clicked">
+            <div class="d-flex justify-content-evenly col-12">
+              <span class="h-menu-detail">{{ actu.label }}</span>
+              <span
+                [class]="
+                  'h-menu-detail h-menu-detail-detail ' +
+                  (child.label == label ? 'h-selected' : '')
+                "
+                (click)="clickLabel(child, actu)"
+                *ngFor="let child of actu.childs"
+                ><a routerLink="{{ child.link }}">{{ child.label }}</a></span
+              >
+            </div>
+          </div>
+          <div *ngIf="clicked" class="row d-flex justify-content-start col-12">
+            <div
+              *ngFor="let link of links"
+              class="d-flex flex-column justify-content-evenly gap-2 col-3 my-3 h-choice"
+            >
+              <span
+                style="font-weight: bold; cursor: pointer"
+                (click)="add(link)"
+                >{{ link.label }}</span
+              >
+              <div class="d-flex flex-column justify-content-evenly gap-2">
+                <span
+                  style="cursor: pointer"
+                  [class]="
+                    child.label == label && link.label == actu.label
+                      ? 'h-selected'
+                      : ''
+                  "
+                  (click)="clickLabel(child, link)"
+                  *ngFor="let child of link.childs"
+                  ><a routerLink="{{ child.link }}">{{ child.label }}</a></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

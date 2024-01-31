@@ -1,13 +1,3 @@
-// --- example-route.js ---
-// • This is an example on how a simple route should be created
-// • Routes are imported on index.js file and are used to declare our simple
-// API endpoints.
-// • Remember, this is a simple template and I will not complicate things but
-// is a good practice to create one file on which you'll import all routes
-// and import that file later on index.js. This way, index.js file will be
-// more clean and simple to read.
-// -----------------------------------------------------------------------------
-
 const Example = require('./../../repo/example-repo')
 const express = require('express')
 const router = express.Router()

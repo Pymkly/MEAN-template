@@ -1,0 +1,6 @@
+npm install @angular/cli
+npm install 
+npm start
+
+npm install mongodb
+npm install express mongoose --save
